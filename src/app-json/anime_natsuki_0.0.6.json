@@ -1,0 +1,12 @@
+
+{
+    "fake": false,
+    "manto": false,
+    "update": false,
+    "mesagge": "Estamos en mantenimiento, la app estará habilitada a las 11:00 am. Hora de México. Mientras tanto puedes ir al Play Store y calificarnos. Gracias.",
+    "app": {
+        "appPackage": "com.blackstorm.natsuki",
+        "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",
+        "nameapp": "Anime Natsuki"
+    }
+}

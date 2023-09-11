@@ -1,0 +1,12 @@
+
+{
+    "fake": false,
+    "manto": false,
+    "update": true,
+    "mesagge": "Se ha publicado una nueva version de la aplicación.",
+    "app": {
+        "appPackage": "com.skizofrenks.natsukii",
+        "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",
+        "nameapp": "Anime Komorebi"
+    }
+}

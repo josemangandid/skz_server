@@ -1,0 +1,16 @@
+{
+    "fake": false,
+    "manto": false,
+    "update": false,
+    "showAds": true,
+    "checkUpdate": false,
+    "numberScript": 3,
+    "tapsToShowAdd": 2,
+    "tapsCapToShowAdd": 1, 
+    "mesagge": "A todos los usuarios les notificamos que ya estamos en el Play Store de nuevo. No olviden desinstalar la version obsoleta",
+    "app": {
+        "appPackage": "com.scorpion777.flvnative",
+        "urlimage": "https://storage.googleapis.com/tantalio/portada_updatenative.png",
+        "nameapp": "Animeflv App"
+    }
+}
