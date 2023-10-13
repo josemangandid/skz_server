@@ -1,13 +1,13 @@
 {
     "fake": false,
-    "manto": false,
+    "manto": true,
     "update": false,
-    "showAds": true,
+    "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "",
+    "mesagge": "Hola querida comunidad, lamentamos lo que está sucediendo con la reproducción de videos, JKAnime ha realizado algunos cambios en sus servidores, por lo que es necesario subir una actualización de la app, solicitamos un poco de paciencia  y estar atentos a la actualización",
     "app": {
         "appPackage": "",
         "urlimage": "",
