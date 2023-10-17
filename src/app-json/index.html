@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redireccionar a la Play Store</title>
+    <title>Instrucciones para instalar JKAnime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #303030;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #FFFFFF;
+        }
+        h1 {
+            background-color: #FFA500;
+            color: white;
+            padding: 20px;
+        }
+        ol {
+            list-style-type: decimal;
+            padding: 0 20px;
+        }
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #777777; /* Color gris */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="redirigirAPlayStore()">Ir a la Play Store</button>
+    <h1>Instrucciones para instalar JKAnime</h1>
+
+    <ol>
+        <li>Copia el siguiente enlace:</li>
+        <li>Abre tu navegador web en tu dispositivo Android.</li>
+        <li>Pega el enlace copiado en la barra de direcciones del navegador y presiona Enter.</li>
+        <li>La Play Store se abrirá y mostrará los resultados de búsqueda para la aplicación.</li>
+        <li>Haz clic en el resultado de la aplicación para ver su página en la Play Store.</li>
+        <li>Desde allí, puedes instalar la aplicación si lo deseas.</li>
+    </ol>
+
+    <button onclick="copiarEnlace()">Copiar el enlace</button>
 
     <script>
-        function redirigirAPlayStore() {
-            // El identificador de la aplicación en la Play Store (packageName)
-            var packageName = "com.turtle.chaca"; // Reemplaza con el nombre de tu aplicación
-
-            // Intenta abrir la aplicación de la Play Store
-            window.location.href = "market://details?id=" + packageName;
-            
-            // Si no se encuentra la aplicación de la Play Store, redirige a la página web de la aplicación
-            setTimeout(function() {
-                window.location.href = "https://play.google.com/store/apps/details?id=" + packageName;
-            }, 1000);
+        function copiarEnlace() {
+            var enlace = "market://details?id=com.turtle.chaca";
+            var input = document.createElement("input");
+            document.body.appendChild(input);
+            input.value = enlace;
+            input.select();
+            document.execCommand("copy");
+            document.body.removeChild(input);
+            alert("Enlace copiado: " + enlace);
         }
     </script>
 </body>
