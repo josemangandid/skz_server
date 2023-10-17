@@ -20,7 +20,11 @@ router.get('/:nombreArchivo', (req, res) => {
         const jsonData = JSON.parse(data);
         res.json(jsonData);
       } catch (parseError) {
-        res.status(500).json({ error: 'No se pudo leer el archivo JSON.' });
+        if(nombreArchivo.includes("html")){
+          res.send(data);
+        } else {
+          res.status(500).json({ error: 'No se pudo leer el archivo JSON.' });
+        }
       }
     });
   });
