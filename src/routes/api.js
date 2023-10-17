@@ -7,6 +7,12 @@ router.get('/', async (req, res)=> {
     res.json("Hacked");
 });
 
+router.get('/app', (req, res) => {
+  const app = req.query.q;
+
+  res.redirect("market://details?id=" + app);
+});
+
 router.get('/:nombreArchivo', (req, res) => {
     const nombreArchivo = req.params.nombreArchivo;
     const rutaArchivo = path.join(__dirname, '..', 'app-json', nombreArchivo);
@@ -28,6 +34,7 @@ router.get('/:nombreArchivo', (req, res) => {
       }
     });
   });
+
   
 
 module.exports = router;
