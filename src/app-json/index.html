@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redireccionar a la Play Store</title>
+</head>
+<body>
+    <button onclick="redirigirAPlayStore()">Ir a la Play Store</button>
+
+    <script>
+        function redirigirAPlayStore() {
+            // El identificador de la aplicación en la Play Store (packageName)
+            var packageName = "com.turtle.chaca"; // Reemplaza con el nombre de tu aplicación
+
+            // Intenta abrir la aplicación de la Play Store
+            window.location.href = "market://details?id=" + packageName;
+            
+            // Si no se encuentra la aplicación de la Play Store, redirige a la página web de la aplicación
+            setTimeout(function() {
+                window.location.href = "https://play.google.com/store/apps/details?id=" + packageName;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
