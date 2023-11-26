@@ -1,0 +1,11 @@
+{
+    "fake": false
+    "manto": false,
+    "update": false,
+    "mesagge": "",
+    "app": {
+        "appPackage": "",
+        "urlimage": "",
+        "nameapp": ""
+    }
+}

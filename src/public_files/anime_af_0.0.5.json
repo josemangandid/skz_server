@@ -1,0 +1,13 @@
+{
+    "fake": false,
+    "manto": false,
+    "update": true,
+    "showAds": false,
+    "checkUpdate": false,
+    "mesagge": "Hemos migrado a esta app, para seguir disfrutando el anime es necesario que instales esta nueva app y dedinstales la anterior 'Anime AF.'",
+    "app": {
+        "appPackage": "com.skizofrenks.flvz",
+        "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
+        "nameapp": "Anime Flv"
+    }
+}

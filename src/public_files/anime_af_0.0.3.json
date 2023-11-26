@@ -1,0 +1,11 @@
+{
+    "fake": false,
+    "manto": false,
+    "update": true,
+    "mesagge": "Se ha publicado una nueva versión de la aplicación.",
+    "app": {
+        "appPackage": "com.blackstorm.af",
+        "urlimage": "https://storage.googleapis.com/tantalio/portada_af.jpg",
+        "nameapp": "Anime Af"
+    }
+}

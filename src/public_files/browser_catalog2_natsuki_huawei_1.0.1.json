@@ -1,0 +1,18 @@
+{
+    "fake": false,
+    "manto": false,
+    "update": false,
+    "showAds": false,
+    "checkUpdate": false,
+    "numberScript": 3,
+    "tapsToShowAdd": 2,
+    "tapsCapToShowAdd": 1, 
+    "mesagge":"",
+    "site": "",
+    "image": "",
+    "app": {
+        "appPackage": "",
+        "urlimage": "",
+        "nameapp": ""
+    }
+}
