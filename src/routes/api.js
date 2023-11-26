@@ -70,7 +70,8 @@ async function readTXTFile(fileName, res){
       if (err) {
         return res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
       }
-
+      
+      res.setHeader('Content-Type', 'text/plain');
       res.send(data);
     });
 }
