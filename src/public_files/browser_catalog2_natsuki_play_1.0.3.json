@@ -1,5 +1,5 @@
 {
-    "fake": false,
+    "fake": true,
     "manto": false,
     "update": false,
     "showAds": true,
