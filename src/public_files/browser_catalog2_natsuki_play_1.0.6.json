@@ -1,8 +1,8 @@
 {
-    "fake": true,
+    "fake": false,
     "manto": false,
     "update": false,
-    "showAds": false,
+    "showAds": true,
     "checkUpdate": false,
     "existInStore": true,
     "numberScript": 3,
