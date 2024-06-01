@@ -7,10 +7,10 @@
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "Se han realizado cambios de optimización y corrección de errores.",
+    "mesagge": "Esta es una actualización importante. Se ha corregido la carga de animes en Directorio y Animes en Emisión",
     "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon.png",
-        "nameapp": "Animeflv App",
+        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
+        "nameapp": "animeFLV",
         "forceUpdate": false,
         "url": "https://flv.crazyboy.site",
         "version": "1.0.3+4"
