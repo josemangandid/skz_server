@@ -1,9 +1,9 @@
 
 {
     "fake": false,
-    "manto": false,
+    "manto": true,
     "update": false,
-    "mesagge": "Estamos en mantenimiento, la app estará habilitada a las 11:00 am. Hora de México. Mientras tanto puedes ir al Play Store y calificarnos. Gracias.",
+    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "app": {
         "appPackage": "com.blackstorm.natsuki",
         "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",

@@ -1,9 +1,9 @@
 
 {
     "fake": false,
-    "manto": false,
-    "update": true,
-    "mesagge": "Se ha publicado una nueva version de la aplicación.",
+    "manto": true,
+    "update": false,
+    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "app": {
         "appPackage": "com.skizofrenks.natsukii",
         "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",

@@ -1,13 +1,13 @@
 {
     "fake": false,
-    "manto": false,
+    "manto": true,
     "update": false,
     "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge":"### ACTUALIZACION NUEVA ###\nIr a revisar la actualizacion con la correccion al play store",
+    "mesagge":"Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "site": "https://cloud0.skizofrenks.xyz/index.html",
     "image": "https://storage.googleapis.com/tantalio/portada_chaca.png",
     "app": {

@@ -1,13 +1,13 @@
 {
     "fake": false,
-    "manto": false,
+    "manto": true,
     "update": false,
-    "showAds": true,
+    "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "",
+    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "app": {
         "appPackage": "",
         "urlimage": "",

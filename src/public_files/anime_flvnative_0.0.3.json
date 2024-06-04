@@ -1,13 +1,13 @@
 {
     "fake": false,
-    "manto": false,
-    "update": true,
+    "manto": true,
+    "update": false,
     "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "A todos los usuarios les notificamos que ya estamos en el Play Store de nuevo. No olviden desinstalar la version obsoleta",
+    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "app": {
         "appPackage": "com.scorpion777.flvnative",
         "urlimage": "https://storage.googleapis.com/tantalio/portada_updatenative.png",

@@ -1,8 +1,8 @@
 {
     "fake": false,
-    "manto": false,
-    "update": true,
-    "mesagge": "Se han corregido los errores y funciona al 100, es necesario actualizar.",
+    "manto": true,
+    "update": false,
+    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.crazyboy.site",
     "app": {
         "appPackage": "com.blackstorm.af",
         "urlimage": "https://storage.googleapis.com/prueba12345678jk/icon.png",
