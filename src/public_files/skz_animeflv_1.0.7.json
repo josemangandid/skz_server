@@ -9,7 +9,7 @@
     "tapsCapToShowAdd": 1, 
     "mesagge": "Se ha corregido el error encontrado para reproducción de video",
     "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon.png",
+        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
         "nameapp": "Animeflv App",
         "forceUpdate": true,
         "url": "https://flv.crazyboy.site/",
