@@ -1,5 +1,5 @@
 {
-    "fake": false,
+    "fake": true,
     "manto": false,
     "update": false,
     "showAds": false,
@@ -7,12 +7,12 @@
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "Google nos ha obligado a cambiar de nombre, favor de instalar esta version de la app",
+    "mesagge": "Se han realizado cambios de optimización y corrección de errores.",
     "app": {
         "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon.png",
         "nameapp": "animeFLOW",
         "forceUpdate": false,
         "url": "https://play.google.com/store/apps/details?id=com.skz.animeflv.store",
-        "version": "1.0.8+9"
+        "version": "1.0.9+10"
     }
 }
