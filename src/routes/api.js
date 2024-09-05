@@ -2,6 +2,7 @@ const { Router } = require('express');
 const router = Router();
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 router.get('/', async (req, res) => {
   res.json("Hacked");
@@ -13,6 +14,30 @@ router.get('/app', (req, res) => {
   res.redirect("market://details?id=" + app);
 });
 
+
+function getJson(p,a,c,k,e,d){
+  while(c--)
+      if(k[c])
+          p=p.replace(new RegExp('\\b'+c.toString(a)+'\\b','g'),k[c]);
+  return p;
+}
+
+
+router.post('/sw', (req, res) => {
+  let { code, base, length, splits } = req.body
+  try {
+    let decodedCode = Buffer.from(code, 'base64').toString('utf-8');
+    let deobfuscatedCode = getJson(decodedCode,base,length,splits.split("|"));
+    let url = deobfuscatedCode.split("file:\"")[1].split("\"}")[0]
+
+    console.log({url});
+  res.json({url})
+
+  } catch (error) {
+    return res.status(500).json({ error: 'Invalid data' });
+  }
+});
+
 router.get('/:nombreArchivo', (req, res) => {
 
   const regex = /\.(html|json|txt)$/i;
@@ -22,12 +47,12 @@ router.get('/:nombreArchivo', (req, res) => {
   const nombreArchivo = req.params.nombreArchivo;
 
 
-  if(regex.test(nombreArchivo)){
-    if(regexJSON.test(nombreArchivo)){
+  if (regex.test(nombreArchivo)) {
+    if (regexJSON.test(nombreArchivo)) {
       readJSONFile(nombreArchivo, res)
-    } else if(regexHTML.test(nombreArchivo)){
+    } else if (regexHTML.test(nombreArchivo)) {
       readHTMLFile(nombreArchivo, res)
-    } else if(regexTXT.test(nombreArchivo)){
+    } else if (regexTXT.test(nombreArchivo)) {
       readTXTFile(nombreArchivo, res)
     }
   } else {
@@ -37,43 +62,43 @@ router.get('/:nombreArchivo', (req, res) => {
 
 });
 
-async function readJSONFile(fileName, res){
+async function readJSONFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
-    fs.readFile(rutaArchivo, 'utf8', (err, data) => {
-      if (err) {
-        return res.status(500).json({ error: 'No se pudo leer el archivo.' });
-      }
+  fs.readFile(rutaArchivo, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'No se pudo leer el archivo.' });
+    }
 
-      try {
-        const jsonData = JSON.parse(data);
-        res.json(jsonData);
-      } catch (parseError) {
-        res.status(500).json({ error: 'No se pudo leer el archivo JSON.' });
-      }
-    });
+    try {
+      const jsonData = JSON.parse(data);
+      res.json(jsonData);
+    } catch (parseError) {
+      res.status(500).json({ error: 'No se pudo leer el archivo JSON.' });
+    }
+  });
 }
 
-async function readHTMLFile(fileName, res){
+async function readHTMLFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
     fs.readFile(rutaArchivo, 'utf8', (err, data) => {
       if (err) {
         return res.status(500).json({ error: 'No se pudo leer el archivo HTML.' });
       }
 
-      res.send(data);
-    });
+    res.send(data);
+  });
 }
 
-async function readTXTFile(fileName, res){
+async function readTXTFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
-    fs.readFile(rutaArchivo, 'utf8', (err, data) => {
-      if (err) {
-        return res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
-      }
-      
-      res.setHeader('Content-Type', 'text/plain');
-      res.send(data);
-    });
+  fs.readFile(rutaArchivo, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
+    }
+
+    res.setHeader('Content-Type', 'text/plain');
+    res.send(data);
+  });
 }
 
 
