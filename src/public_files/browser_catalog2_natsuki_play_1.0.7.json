@@ -13,9 +13,9 @@
     "ua": "PostmanRuntime/7.41.2",
     "image": "",
     "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
-        "nameapp": "Animeflv App",
-        "forceUpdate": true,
+        "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
+        "nameapp": "Anime Natsuki",
+        "forceUpdate": false,
         "url": "https://flv.crazyboy.site/",
         "version": "1.0.8+9"
     }
