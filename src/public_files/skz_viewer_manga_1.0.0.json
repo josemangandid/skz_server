@@ -1,0 +1,15 @@
+{
+  "underReview": false,
+  "underMaintenance": false,
+  "showAds": true,
+  "requestUpdate": false,
+  "isAvailableInStore": true,
+  "message": "",
+  "app": {
+    "imageUrl": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
+    "appName": "Anime Natsuki",
+    "isForceUpdateEnabled": false,
+    "appUrl": "https://flv.crazyboy.site/",
+    "appVersion": "1.0.8+9"
+  }
+}
