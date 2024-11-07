@@ -1,7 +1,7 @@
 {
-  "underReview": true,
+  "underReview": false,
   "underMaintenance": false,
-  "showAds": true,
+  "showAds": false,
   "requestUpdate": false,
   "isAvailableInStore": true,
   "message": "",
