@@ -1,22 +1,22 @@
 {
     "fake": false,
     "manto": false,
-    "update": false,
+    "update": true,
     "showAds": true,
     "checkUpdate": false,
     "existInStore": true,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge":"Estamos en mantenimiendo, favor de tener paciencia. En su lugar podeis descargar nuestra apk de animeFLV de https://flv.crazyboy.site",
-    "site": "https://flv.crazyboy.site",
+    "mesagge":"Hemos publicado una version en la que se corrigieron los errores presentados en el directorio de animes",
+    "site": "https://play.google.com/store/apps/details?id=com.browser.catalog2.natsuki.play",
     "ua": "PostmanRuntime/7.41.2",
     "image": "",
     "app": {
         "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
         "nameapp": "Anime Natsuki",
         "forceUpdate": false,
-        "url": "https://flv.crazyboy.site/",
-        "version": "1.0.8+9"
+        "url": "https://play.google.com/store/apps/details?id=com.browser.catalog2.natsuki.play",
+        "version": "1.0.10+11"
     }
 }
