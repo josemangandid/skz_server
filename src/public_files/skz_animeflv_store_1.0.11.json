@@ -1,17 +1,17 @@
 {
-    "fake": false,
+    "fake": true,
     "manto": false,
-    "update": true,
+    "update": false,
     "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "La version disponible se encuentra en mantenimiento, mientras se resuelve puedes instalar la version alternativa desde nuestro sitio web.",
+    "mesagge": "Hemos resuelto los errores presentados, por favor actualizar :)",
     "app": {
         "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon.png",
-        "nameapp": "animeFLV",
-        "forceUpdate": true,
+        "nameapp": "animeFLOW FLV",
+        "forceUpdate": false,
         "url": "https://flv.crazyboy.site",
         "version": "1.0.7+8"
     }
