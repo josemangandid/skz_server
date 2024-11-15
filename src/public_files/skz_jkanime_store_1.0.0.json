@@ -1,10 +1,10 @@
 {
-    "fake": false,
+    "fake": true,
     "manto": false,
     "update": false,
     "showAds": false,
     "checkUpdate": false,
-    "existInStore": true,
+    "existInStore": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
