@@ -1,0 +1,15 @@
+{
+  "underReview": true,
+  "underMaintenance": false,
+  "showAds": false,
+  "requestUpdate": false,
+  "isAvailableInStore": false,
+  "message": "",
+  "app": {
+    "imageUrl": "https://storage.googleapis.com/crazy_rebelion/manga_v/icon_manga_v.png",
+    "appName": "MANGA V App",
+    "isForceUpdateEnabled": false,
+    "appUrl": "https://play.google.com/store/apps/details?id=com.skz.viewer_manga.store",
+    "appVersion": "1.0.1+2"
+  }
+}
