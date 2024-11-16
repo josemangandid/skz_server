@@ -1,18 +1,18 @@
 {
     "fake": false,
     "manto": false,
-    "update": false,
+    "update": true,
     "showAds": true,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1,
-    "mesagge":"Estamos en mantenimiendo, favor de tener paciencia. En su lugar podeis descargar nuestra apk de animeFLV de https://flv.crazyboy.site",
+    "mesagge":"Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
     "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
-        "nameapp": "animeFLV",
-        "forceUpdate": false,
-        "url": "https://flv.crazyboy.site",
-        "version": "1.0.4+5"
+        "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
+        "nameapp": "JkAnime",
+        "forceUpdate": true,
+        "url": "https://jkanime.crazyboy.site",
+        "version": "1.0.1+2"
     }
 }
