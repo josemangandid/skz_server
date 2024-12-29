@@ -1,18 +1,18 @@
 {
     "fake": false,
     "manto": false,
-    "update": false,
-    "showAds": true,
+    "update": true,
+    "showAds": false,
     "checkUpdate": false,
     "numberScript": 3,
     "tapsToShowAdd": 2,
     "tapsCapToShowAdd": 1, 
-    "mesagge": "Se ha corregido el error encontrado para reproducción de video",
+    "mesagge": "Hola Usuarios, esta NO ES UNA INSTALACIÓN OBLIGATORIA y puedes descartarla, pero solicito de su apoyo, si pudieran instalar la app que les muestro y calificarla por favor. Mil gracias!. Si lo haces no verás anuncios por un tiempo.",
     "app": {
         "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
         "nameapp": "Animeflv App",
-        "forceUpdate": true,
-        "url": "https://flv.crazyboy.site/",
+        "forceUpdate": false,
+        "url": "https://play.google.com/store/apps/details?id=com.skz.animeflv.store",
         "version": "1.0.8+9"
     }
 }
