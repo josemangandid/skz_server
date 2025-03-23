@@ -1,18 +1,18 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": true,
-    "showAds": true,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1,
-    "mesagge":"Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
-    "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
-        "nameapp": "JkAnime",
-        "forceUpdate": true,
-        "url": "https://jkanime.crazyboy.site",
-        "version": "1.0.1+2"
-    }
+  "fake": false,
+  "manto": false,
+  "update": true,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
+    "nameapp": "JkAnime",
+    "forceUpdate": true,
+    "url": "https://jkanime.crazyboy.site",
+    "version": "1.0.2+3"
+  }
 }
