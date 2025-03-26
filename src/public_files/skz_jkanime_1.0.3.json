@@ -1,7 +1,7 @@
 {
   "fake": false,
   "manto": false,
-  "update": true,
+  "update": false,
   "showAds": true,
   "checkUpdate": false,
   "existInStore": false,
@@ -17,8 +17,8 @@
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
     "nameapp": "JkAnime",
-    "forceUpdate": true,
+    "forceUpdate": false,
     "url": "https://jkanime.crazyboy.site",
-    "version": "1.0.3"
+    "version": "1.0.4"
   }
 }
