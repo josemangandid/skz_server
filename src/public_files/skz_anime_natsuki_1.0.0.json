@@ -8,7 +8,7 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Pueden descargar nuestra app desde https://jkanime.crazyboy.site",
+  "message": "Pueden descargar nuestra app desde https://jkanime.crazyboy.site",
   "site": "https://jkanime.crazyboy.site",
   "headers": {
     "User-Agent": "PostmanRuntime/7.41.2"
