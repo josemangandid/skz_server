@@ -2,21 +2,21 @@
   "fake": false,
   "manto": false,
   "update": true,
-  "showAds": true,
+  "showAds": false,
   "checkUpdate": false,
-  "existInStore": true,
+  "existInStore": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Pueden descargar nuestra app desde https://jkanime.crazyboy.site",
+  "mesagge": "Descarga la app desde el botón actualizar.",
   "site": "https://jkanime.crazyboy.site",
   "ua": "PostmanRuntime/7.41.2",
   "image": "",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
     "nameapp": "Anime Natsuki",
-    "forceUpdate": false,
-    "url": "https://jkanime.crazyboy.site",
-    "version": "1.0.10+11"
+    "forceUpdate": true,
+    "url": "https://storage.googleapis.com/crazy_rebelion/natsuki/anime_natsuki_1.0.0.apk",
+    "version": "1.0.0+1"
   }
 }
