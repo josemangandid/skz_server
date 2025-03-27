@@ -1,19 +1,19 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": false,
-    "showAds": true,
-    "checkUpdate": false,
-    "existInStore": true,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge":"Estamos en mantenimiendo, favor de tener paciencia. En su lugar podeis descargar nuestra apk de animeFLV de https://flv.crazyboy.site",
-    "site": "https://flv.crazyboy.site",
-    "image": "",
-    "app": {
-        "appPackage": "",
-        "urlimage": "",
-        "nameapp": ""
-    }
+  "fake": false,
+  "manto": false,
+  "update": true,
+  "showAds": false,
+  "checkUpdate": false,
+  "existInStore": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Estamos en mantenimiendo, favor de tener paciencia. En su lugar podeis descargar nuestra apk de animeFLV de https://flv.crazyboy.site",
+  "site": "https://flv.crazyboy.site",
+  "image": "",
+  "app": {
+    "appPackage": "",
+    "urlimage": "",
+    "nameapp": ""
+  }
 }

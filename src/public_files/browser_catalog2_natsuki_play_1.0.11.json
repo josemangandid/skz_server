@@ -1,22 +1,22 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": false,
-    "showAds": true,
-    "checkUpdate": false,
-    "existInStore": true,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge":"Hemos publicado una version en la que se corrigieron los errores presentados en el directorio de animes",
-    "site": "https://play.google.com/store/apps/details?id=com.browser.catalog2.natsuki.play",
-    "ua": "PostmanRuntime/7.41.2",
-    "image": "",
-    "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
-        "nameapp": "Anime Natsuki",
-        "forceUpdate": false,
-        "url": "https://play.google.com/store/apps/details?id=com.browser.catalog2.natsuki.play",
-        "version": "1.0.10+12"
-    }
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": true,
+  "checkUpdate": false,
+  "existInStore": true,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Pueden descargar nuestra app desde https://jkanime.crazyboy.site",
+  "site": "https://jkanime.crazyboy.site",
+  "ua": "PostmanRuntime/7.41.2",
+  "image": "",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
+    "nameapp": "Anime Natsuki",
+    "forceUpdate": false,
+    "url": "https://jkanime.crazyboy.site",
+    "version": "1.0.10+12"
+  }
 }

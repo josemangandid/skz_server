@@ -1,19 +1,19 @@
 {
-    "fake": true,
-    "manto": false,
-    "update": false,
-    "showAds": false,
-    "checkUpdate": false,
-    "existInStore": true,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge":"",
-    "site": "",
-    "image": "",
-    "app": {
-        "appPackage": "",
-        "urlimage": "",
-        "nameapp": ""
-    }
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": false,
+  "checkUpdate": false,
+  "existInStore": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Pueden descargar nuestra app desde https://jkanime.crazyboy.site",
+  "site": "https://jkanime.crazyboy.site",
+  "image": "",
+  "app": {
+    "appPackage": "",
+    "urlimage": "",
+    "nameapp": ""
+  }
 }
