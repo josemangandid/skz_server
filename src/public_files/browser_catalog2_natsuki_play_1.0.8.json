@@ -9,14 +9,14 @@
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
   "mesagge": "Descarga la app desde el botón actualizar.",
-  "site": "https://jkanime.crazyboy.site",
+  "site": "https://animenatsuki-skz.web.app/",
   "ua": "PostmanRuntime/7.41.2",
   "image": "",
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
     "nameapp": "Anime Natsuki",
     "forceUpdate": true,
-    "url": "https://storage.googleapis.com/crazy_rebelion/natsuki/anime_natsuki_1.0.0.apk",
+    "url": "https://animenatsuki-skz.web.app/",
     "version": "1.0.0+1"
   }
 }
