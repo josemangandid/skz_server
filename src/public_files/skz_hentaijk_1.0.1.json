@@ -2,23 +2,23 @@
   "fake": false,
   "manto": false,
   "update": false,
-  "showAds": true,
+  "showAds": false,
   "checkUpdate": false,
   "existInStore": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
+  "mesagge": "Quieres instalar la version Hentai de JK? Es opcional...",
   "site": "https://jkanime.crazyboy.site",
   "headers": {
     "User-Agent": "PostmanRuntime/7.41.2"
   },
   "image": "",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
-    "nameapp": "JkAnime",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
+    "nameapp": "HentaiJK",
     "forceUpdate": false,
-    "url": "https://jkanime.crazyboy.site",
-    "version": "1.0.4"
+    "url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk_1.0.0.apk",
+    "version": "1.0.0"
   }
 }
