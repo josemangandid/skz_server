@@ -1,8 +1,8 @@
 {
   "fake": false,
   "manto": false,
-  "update": true,
-  "showAds": true,
+  "update": false,
+  "showAds": false,
   "checkUpdate": false,
   "existInStore": false,
   "numberScript": 3,
@@ -18,7 +18,7 @@
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
     "nameapp": "HentaiJK",
     "forceUpdate": false,
-    "url": "https://hentaijk.web.app/",
+    "url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk_1.0.0.apk",
     "version": "1.0.0"
   }
 }
