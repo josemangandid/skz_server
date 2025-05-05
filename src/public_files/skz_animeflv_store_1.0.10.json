@@ -1,18 +1,18 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": false,
-    "showAds": true,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge": "Hemos resuelto los errores presentados, por favor actualizar :)",
-    "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flow.png",
-        "nameapp": "animeFLOW FLV",
-        "forceUpdate": false,
-        "url": "https://play.google.com/store/apps/details?id=com.skz.animeflv.store",
-        "version": "1.0.11+12"
-    }
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Hemos resuelto los errores presentados, por favor actualizar :)",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flow.png",
+    "nameapp": "animeFLOW FLV",
+    "forceUpdate": false,
+    "url": "https://play.google.com/store/apps/details?id=com.skz.animeflv.store",
+    "version": "1.0.11+12"
+  }
 }
