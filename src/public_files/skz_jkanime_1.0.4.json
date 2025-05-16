@@ -1,7 +1,7 @@
 {
   "fake": false,
   "manto": false,
-  "update": true,
+  "update": false,
   "showAds": true,
   "checkUpdate": false,
   "existInStore": false,
@@ -15,10 +15,10 @@
   },
   "image": "",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
-    "nameapp": "JK Anime",
-    "forceUpdate": true,
-    "url": "https://jkanime.crazyboy.site/",
-    "version": "1.0.4"
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
+    "nameapp": "HentaiJK",
+    "forceUpdate": false,
+    "url": "https://hentaijk.app/",
+    "version": "1.0.0"
   }
 }
