@@ -7,12 +7,14 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
+  "mesagge": "Hemos publicado una nueva version, te invitamos a actualizar :-)",
+  "site": "https://jkanime.crazyboy.site",
+  "image": "",
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
-    "nameapp": "JkAnime",
+    "nameapp": "JK Anime",
     "forceUpdate": true,
-    "url": "https://jkanime.crazyboy.site",
-    "version": "1.0.2+3"
+    "url": "https://jkanime.crazyboy.site/",
+    "version": "1.0.4"
   }
 }

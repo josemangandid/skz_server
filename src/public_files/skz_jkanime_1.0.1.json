@@ -2,21 +2,23 @@
   "fake": false,
   "manto": false,
   "update": true,
-  "showAds": false,
+  "showAds": true,
   "checkUpdate": false,
   "existInStore": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Hemos corregido los errores presentados en esta nueva versión, por favor actualizar.",
+  "mesagge": "Hemos publicado una nueva version, te invitamos a actualizar :-)",
   "site": "https://jkanime.crazyboy.site",
-  "ua": "PostmanRuntime/7.41.2",
+  "headers": {
+    "User-Agent": "PostmanRuntime/7.41.2"
+  },
   "image": "",
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
-    "nameapp": "JkAnime",
+    "nameapp": "JK Anime",
     "forceUpdate": true,
-    "url": "https://jkanime.crazyboy.site",
-    "version": "1.0.3+4"
+    "url": "https://jkanime.crazyboy.site/",
+    "version": "1.0.4"
   }
 }
