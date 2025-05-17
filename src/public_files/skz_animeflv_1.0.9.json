@@ -1,0 +1,18 @@
+{
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Quieres instalar la version Hentai de JK? Es opcional...",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
+    "nameapp": "HentaiJK",
+    "forceUpdate": false,
+    "url": "https://hentaijk.app/",
+    "version": "1.0.0"
+  }
+}
