@@ -2,7 +2,7 @@
   "fake": false,
   "manto": false,
   "update": false,
-  "showAds": false,
+  "showAds": true,
   "checkUpdate": false,
   "existInStore": false,
   "numberScript": 3,
