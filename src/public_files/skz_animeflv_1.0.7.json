@@ -1,18 +1,18 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": false,
-    "showAds": true,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge": "Se ha corregido el error encontrado para reproducción de video",
-    "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
-        "nameapp": "Animeflv App",
-        "forceUpdate": true,
-        "url": "https://flv.crazyboy.site/",
-        "version": "1.0.8+9"
-    }
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Hemos publicado una nueva versión con los errores corregidos, te invitamos a actualizar >:v",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
+    "nameapp": "Animeflv App",
+    "forceUpdate": true,
+    "url": "https://flv.crazyboy.site/",
+    "version": "1.1.0+11"
+  }
 }

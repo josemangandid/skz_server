@@ -7,12 +7,12 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Hemos publicado una nueva versión, te invitamos a actualizar :-)",
+  "mesagge": "Hemos publicado una nueva versión con los errores corregidos, te invitamos a actualizar >:v",
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/animeflv.png",
     "nameapp": "animeFLV",
     "forceUpdate": true,
     "url": "https://flv.crazyboy.site/",
-    "version": "1.0.9"
+    "version": "1.1.0"
   }
 }

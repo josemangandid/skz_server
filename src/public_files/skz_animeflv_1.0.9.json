@@ -7,12 +7,12 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Quieres instalar la version Hentai de JK? Es opcional...",
+  "mesagge": "Hemos publicado una nueva versión con los errores corregidos, te invitamos a actualizar >:v",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
-    "nameapp": "HentaiJK",
-    "forceUpdate": false,
-    "url": "https://hentaijk.app/",
-    "version": "1.0.0"
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/animeflv.png",
+    "nameapp": "animeFLV",
+    "forceUpdate": true,
+    "url": "https://flv.crazyboy.site/",
+    "version": "1.1.0"
   }
 }
