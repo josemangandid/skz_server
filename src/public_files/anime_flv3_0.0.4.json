@@ -1,13 +1,14 @@
 {
   "fake": false,
-  "manto": false,
+  "manto": true,
   "update": false,
   "showAds": true,
   "checkUpdate": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Encuentra una actualización en https://flv.crazyboy.site",
+  "mesagge": "​🛠️ Mantenimiento en curso: Disculpa las molestias. Aprovecha este tiempo para descargar la versión actualizada en https://flv.skizofrenks.xyz
+​¡No olvides seguirnos en TikTok (@Skizofrenks) para no perderte nada! 👊✨",
   "app": {
     "appPackage": "com.scorpion777.flv",
     "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
