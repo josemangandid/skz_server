@@ -1,14 +1,13 @@
 {
   "fake": false,
   "manto": true,
-  "update": false,
+  "update": true,
   "showAds": true,
   "checkUpdate": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "​🛠️ Mantenimiento en curso: Disculpa las molestias. Aprovecha este tiempo para descargar la versión actualizada en https://flv.skizofrenks.xyz
-​¡No olvides seguirnos en TikTok (@Skizofrenks) para no perderte nada! 👊✨",
+  "message": "🛠️ Mantenimiento en curso: Disculpa las molestias. \n\nAprovecha para descargar la versión actualizada en: https://flv.skizofrenks.xyz \n\n¡Síguenos en TikTok (@Skizofrenks) para novedades! 👊✨",
   "app": {
     "appPackage": "com.scorpion777.flv",
     "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
