@@ -1,7 +1,7 @@
 {
   "fake": false,
   "manto": true,
-  "update": true,
+  "update": false,
   "showAds": true,
   "checkUpdate": false,
   "numberScript": 3,
