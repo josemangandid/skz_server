@@ -1,11 +1,11 @@
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "mesagge":"Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.blackstorm.natsuki",
-        "urlimage": "https://storage.googleapis.com/tantalio/portadaPlay.png",
-        "nameapp": "Anime Natsuki"
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.blackstorm.natsuki",
+    "urlimage": "https://storage.googleapis.com/tantalio/portadaPlay.png",
+    "nameapp": "Anime Natsuki"
+  }
 }

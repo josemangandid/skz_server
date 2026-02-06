@@ -1,18 +1,18 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": true,
-    "showAds": true,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge": "Se ha corregido el error encontrado para reproducción de video",
-    "app": {
-        "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
-        "nameapp": "Animeflv App",
-        "forceUpdate": true,
-        "url": "https://flv.skizofrenks.xyz/",
-        "version": "1.0.7+8"
-    }
+  "fake": false,
+  "manto": false,
+  "update": true,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Se ha corregido el error encontrado para reproducción de video",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon_flv.png",
+    "nameapp": "Animeflv App",
+    "forceUpdate": true,
+    "url": "https://animeflvapp.net/",
+    "version": "1.0.7+8"
+  }
 }

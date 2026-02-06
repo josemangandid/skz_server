@@ -1,11 +1,11 @@
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.blackstorm.af",
-        "urlimage": "https://storage.googleapis.com/prueba12345678jk/icon.png",
-        "nameapp": "Anime AF Mira anime subtitulado al español gratis."
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.blackstorm.af",
+    "urlimage": "https://storage.googleapis.com/prueba12345678jk/icon.png",
+    "nameapp": "Anime AF Mira anime subtitulado al español gratis."
+  }
 }

@@ -1,13 +1,13 @@
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "showAds": false,
-    "checkUpdate": false,
-    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.skizofrenks.flv",
-        "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
-        "nameapp": "Anime Flv"
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "showAds": false,
+  "checkUpdate": false,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.skizofrenks.flv",
+    "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
+    "nameapp": "Anime Flv"
+  }
 }

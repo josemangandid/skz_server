@@ -1,12 +1,11 @@
-
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.skizofrenks.natsukii",
-        "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",
-        "nameapp": "Anime Komorebi"
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.skizofrenks.natsukii",
+    "urlimage": "https://storage.googleapis.com/tantalio/portada1.png",
+    "nameapp": "Anime Komorebi"
+  }
 }

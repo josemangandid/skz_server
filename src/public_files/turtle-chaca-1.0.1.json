@@ -1,18 +1,18 @@
 {
-    "fake": false,
-    "manto": false,
-    "update": false,
-    "showAds": true,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge":"Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "site": "https://cloud0.skizofrenks.xyz/index.html",
-    "image": "https://storage.googleapis.com/tantalio/portada_chaca.png",
-    "app": {
-        "appPackage": "",
-        "urlimage": "",
-        "nameapp": ""
-    }
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": true,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "site": "https://cloud0.skizofrenks.xyz/index.html",
+  "image": "https://storage.googleapis.com/tantalio/portada_chaca.png",
+  "app": {
+    "appPackage": "",
+    "urlimage": "",
+    "nameapp": ""
+  }
 }

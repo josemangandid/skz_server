@@ -1,11 +1,11 @@
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.blackstorm.af",
-        "urlimage": "https://storage.googleapis.com/tantalio/portada_af.jpg",
-        "nameapp": "Anime Af"
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.blackstorm.af",
+    "urlimage": "https://storage.googleapis.com/tantalio/portada_af.jpg",
+    "nameapp": "Anime Af"
+  }
 }

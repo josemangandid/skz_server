@@ -1,16 +1,16 @@
 {
-    "fake": false,
-    "manto": true,
-    "update": false,
-    "showAds": false,
-    "checkUpdate": false,
-    "numberScript": 3,
-    "tapsToShowAdd": 2,
-    "tapsCapToShowAdd": 1, 
-    "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://flv.skizofrenks.xyz",
-    "app": {
-        "appPackage": "com.scorpion777.flv",
-        "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
-        "nameapp": "Animeflv App"
-    }
+  "fake": false,
+  "manto": true,
+  "update": false,
+  "showAds": false,
+  "checkUpdate": false,
+  "numberScript": 3,
+  "tapsToShowAdd": 2,
+  "tapsCapToShowAdd": 1,
+  "mesagge": "Encuentra una nueva actualización en nuestro sitio web Oficial https://animeflvapp.net",
+  "app": {
+    "appPackage": "com.scorpion777.flv",
+    "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
+    "nameapp": "Animeflv App"
+  }
 }
