@@ -1,18 +1,18 @@
 {
   "fake": false,
   "manto": false,
-  "update": false,
+  "update": true,
   "showAds": true,
   "checkUpdate": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Se han realizado cambios de optimización y corrección de errores.",
+  "mesagge": "Hemos cocinado algunas mejoras en AnimeFLV para que tu experiencia sea más fluida. Puedes seguir usando la versión actual, pero te recomendamos actualizar para disfrutar de las últimas novedades.",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/animeflv/icon.png",
-    "nameapp": "Animeflv App",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/anime_flv/anime_flv.png",
+    "nameapp": "animeFLV",
     "forceUpdate": false,
-    "url": "https://animeflvapp.net",
-    "version": "1.0.2+3"
+    "url": "https://animeflvapp.net/",
+    "version": "1.0.0"
   }
 }

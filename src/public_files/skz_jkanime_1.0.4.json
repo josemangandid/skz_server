@@ -1,24 +1,24 @@
 {
   "fake": false,
   "manto": false,
-  "update": false,
-  "showAds": false,
+  "update": true,
+  "showAds": true,
   "checkUpdate": false,
   "existInStore": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Síguenos en tiktok skizofrenks, ahora estamos en mantenimiento",
-  "site": "https://www.tiktok.com/@skizofrenks",
+  "mesagge": "Hemos publicado una nueva version, te invitamos a actualizar :-)",
+  "site": "https://animeflvapp.net",
   "headers": {
     "User-Agent": "PostmanRuntime/7.41.2"
   },
   "image": "",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
-    "nameapp": "HentaiJK",
-    "forceUpdate": false,
-    "url": "https://hentaijk.app/",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/anime_flv/anime_flv.png",
+    "nameapp": "animeFLV",
+    "forceUpdate": true,
+    "url": "https://animeflvapp.net/",
     "version": "1.0.0"
   }
 }

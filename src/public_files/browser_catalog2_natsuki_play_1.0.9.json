@@ -8,15 +8,15 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Descarga la app desde el botón actualizar.",
-  "site": "https://natsuki.skizofrenks.xyz/",
+  "site": "https://animeflvapp.net/",
   "ua": "PostmanRuntime/7.41.2",
   "image": "",
+  "mesagge": "Hemos cocinado algunas mejoras en AnimeFLV para que tu experiencia sea más fluida. Puedes seguir usando la versión actual, pero te recomendamos actualizar para disfrutar de las últimas novedades.",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
-    "nameapp": "Anime Natsuki",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/anime_flv/anime_flv.png",
+    "nameapp": "animeFLV",
     "forceUpdate": true,
-    "url": "https://natsuki.skizofrenks.xyz/",
-    "version": "1.0.0+1"
+    "url": "https://animeflvapp.net/",
+    "version": "1.0.0"
   }
 }

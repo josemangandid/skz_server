@@ -1,6 +1,6 @@
 {
   "fake": false,
-  "manto": false,
+  "manto": true,
   "update": false,
   "showAds": true,
   "checkUpdate": false,

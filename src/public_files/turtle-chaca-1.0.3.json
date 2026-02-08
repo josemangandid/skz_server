@@ -1,6 +1,6 @@
 {
   "fake": false,
-  "manto": false,
+  "manto": true,
   "update": false,
   "showAds": true,
   "checkUpdate": false,
@@ -9,7 +9,7 @@
   "tapsCapToShowAdd": 1,
   "mesagge": "Estamos en mantenimiendo, favor de tener paciencia. En su lugar podeis descargar nuestra apk de animeFLV de https://animeflvapp.net",
   "site": "https://animeflvapp.net",
-  "image": "https://storage.googleapis.com/tantalio/portada_chaca.png",
+  "image": "https://storage.googleapis.com/crazy_rebelion/anime_flv/anime_flv.png",
   "app": {
     "appPackage": "",
     "urlimage": "",
