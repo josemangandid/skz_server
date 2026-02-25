@@ -1,13 +1,13 @@
 {
   "fake": false,
-  "manto": false,
+  "manto": true,
   "update": false,
-  "showAds": true,
+  "showAds": false,
   "checkUpdate": false,
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Mantenimiento en curso: Disculpa las molestias. \n\nAprovecha para descargar la version actualizada en: https://animeflvapp.net\n\nSiguenos en TikTok (@Skizofrenks) para novedades.",
+  "mesagge": "¡Aviso para la comunidad! ¿Problemas al cargar episodios?\n\nAnimeFLV actualizó su sistema, ¡pero ya hicimos la magia y lo tenemos solucionado!\n\nPara que todo vuelva a la normalidad y sigas maratoneando sin problemas, instala la nueva versión. Te tomará menos de un minuto.\n\nActualiza gratis y seguro desde nuestro sitio oficial: https://animeflvapp.net",
   "app": {
     "appPackage": "com.scorpion777.flv",
     "urlimage": "https://storage.googleapis.com/tantalio/portada_update.png",
