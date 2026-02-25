@@ -3,7 +3,8 @@
   "underMaintenance": false,
   "showAds": false,
   "requestUpdate": false,
-  "isAvailableInStore": true,
+  "isAvailableInStore": false,
+  "authority": "zonatmo.com",
   "message": "",
   "app": {
     "imageUrl": "https://storage.googleapis.com/crazy_rebelion/natsuki/icon_natsuki.png",
