@@ -1,7 +1,7 @@
 {
   "underReview": false,
   "underMaintenance": false,
-  "showAds": false,
+  "showAds": true,
   "requestUpdate": false,
   "isAvailableInStore": false,
   "authority": "zonatmo.com",
