@@ -1,7 +1,7 @@
 {
   "fake": false,
   "manto": false,
-  "update": false,
+  "update": true,
   "showAds": false,
   "checkUpdate": false,
   "existInStore": false,
@@ -19,6 +19,6 @@
     "nameapp": "HentaiJK",
     "forceUpdate": true,
     "url": "https://hentaijk.app/",
-    "version": "1.0.1"
+    "version": "1.0.3"
   }
 }
