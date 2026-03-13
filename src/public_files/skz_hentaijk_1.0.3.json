@@ -1,0 +1,30 @@
+{
+  "app_status": {
+    "is_maintenance": false
+  },
+  "app_details": {
+    "name": "HentaiJK",
+    "website_url": "https://hentaijk.app/",
+    "icon_url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png"
+  },
+  "update_config": {
+    "is_update_available": false,
+    "force_update": true,
+    "latest_version": "1.0.1",
+    "update_message": "Hemos publicado una nueva version, te invitamos a actualizar :-)",
+    "download_url": "https://hentaijk.app/"
+  },
+  "ads_config": {
+    "global_ads_enabled": true,
+    "show_interstitial": false,
+    "show_rewarded": false,
+    "show_banners": true,
+    "taps_to_show_ad": 2,
+    "taps_per_chapter_to_show_ad": 1
+  },
+  "network_config": {
+    "headers": {
+      "User-Agent": "PostmanRuntime/7.41.2"
+    }
+  }
+}
