@@ -8,17 +8,17 @@
   "numberScript": 3,
   "tapsToShowAdd": 2,
   "tapsCapToShowAdd": 1,
-  "mesagge": "Hemos publicado una nueva version de HentaiJK, te invitamos a actualizar :-)",
-  "site": "https://hentaijk.app",
+  "mesagge": "Hemos publicado una nueva version de JKAnime, te invitamos a actualizar :-)",
+  "site": "https://jkanime.skizofrenks.xyz/",
   "headers": {
     "User-Agent": "PostmanRuntime/7.41.2"
   },
   "image": "",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png",
-    "nameapp": "HentaiJK",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
+    "nameapp": "JK Anime",
     "forceUpdate": true,
-    "url": "https://hentaijk.app/",
-    "version": "1.0.2"
+    "url": "https://jkanime.skizofrenks.xyz//",
+    "version": "1.0.6"
   }
 }
