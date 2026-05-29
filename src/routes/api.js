@@ -69,6 +69,24 @@ router.post('/eval', (req, res) => {
   }
 });
 
+router.get('/discord-callback', (req, res) => {
+  const { code, state, error, error_description } = req.query;
+
+  let redirectUri = 'animeflv-callback://discord-callback';
+  const params = [];
+
+  if (code) params.push(`code=${code}`);
+  if (state) params.push(`state=${state}`);
+  if (error) params.push(`error=${error}`);
+  if (error_description) params.push(`error_description=${error_description}`);
+
+  if (params.length > 0) {
+    redirectUri += `?${params.join('&')}`;
+  }
+
+  res.redirect(redirectUri);
+});
+
 router.get('/:nombreArchivo', (req, res) => {
 
   const regex = /\.(html|json|txt)$/i;
