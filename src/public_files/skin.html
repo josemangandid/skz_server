@@ -49,15 +49,13 @@
                 request.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.TS;
                 request.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.MPEG2_TS;
 
-                if (request.media.customData) {
-                    const customData = request.media.customData;
-
-                    if (customData.preloadPoster) {
-                        document.querySelector('cast-media-player').style.setProperty(
-                            '--splash-image',
-                            `url('${customData.preloadPoster}')`
-                        );
-                    }
+                const metadata = request.media.metadata;
+                if (metadata && metadata.images && metadata.images.length > 0) {
+                    const posterUrl = metadata.images[0].url;
+                    document.querySelector('cast-media-player').style.setProperty(
+                        '--splash-image',
+                        `url('${posterUrl}')`
+                    );
                 }
 
                 const playbackConfig = new cast.framework.PlaybackConfig();
