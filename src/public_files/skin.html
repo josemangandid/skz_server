@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        cast-media-player {
+            --theme-hue: 190;
+
+            --body-color: #FFFFFF;
+            --subtitle-color: #00E5FF;
+
+            --unplayed-color: #212121;
+            --played-color: #00E5FF;
+            --buffered-color: #7E57C2;
+            --loading-color: #FF1744;
+
+            --icon-color: #FFFFFF;
+
+            --splash-size: cover;
+            --splash-image: url('splash.jpg');
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 40%);
+        }
+
+        .mdl-spinner__layer {
+            border-color: #00E5FF !important;
+        }
+    </style>
+</head>
+
+<body>
+    <cast-media-player></cast-media-player>
+
+    <script>
+        const context = cast.framework.CastReceiverContext.getInstance();
+        const playerManager = context.getPlayerManager();
+
+        playerManager.setMessageInterceptor(
+            cast.framework.messages.MessageType.LOAD,
+            request => {
+                request.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.TS;
+                request.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.MPEG2_TS;
+
+                if (request.media.customData) {
+                    const customData = request.media.customData;
+
+                    if (customData.preloadPoster) {
+                        document.querySelector('cast-media-player').style.setProperty(
+                            '--splash-image',
+                            `url('${customData.preloadPoster}')`
+                        );
+                    }
+                }
+
+                const playbackConfig = new cast.framework.PlaybackConfig();
+                playbackConfig.initialBandwidth = 5000000;
+                playbackConfig.manifestHandlerCb = (manifest) => manifest;
+                context.start({ playbackConfig: playbackConfig });
+
+                return request;
+            }
+        );
+
+        const options = new cast.framework.CastReceiverOptions();
+        options.disableIdleTimeout = true;
+        options.maxInactivity = 3600;
+
+        context.start(options);
+    </script>
+</body>
+
+</html>
