@@ -13,20 +13,15 @@
 
         cast-media-player {
             --theme-hue: 190;
-
             --body-color: #FFFFFF;
             --subtitle-color: #00E5FF;
-
             --unplayed-color: #212121;
             --played-color: #00E5FF;
             --buffered-color: #7E57C2;
             --loading-color: #FF1744;
-
             --icon-color: #FFFFFF;
-
             --splash-size: cover;
             --splash-image: url('splash.jpg');
-
             background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 40%);
         }
 
@@ -43,33 +38,42 @@
         const context = cast.framework.CastReceiverContext.getInstance();
         const playerManager = context.getPlayerManager();
 
+        const playbackConfig = new cast.framework.PlaybackConfig();
+        playbackConfig.initialBandwidth = 1500000;
+        playbackConfig.manifestHandlerCb = (manifest) => manifest;
+
         playerManager.setMessageInterceptor(
             cast.framework.messages.MessageType.LOAD,
             request => {
-                request.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.TS;
-                request.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.MPEG2_TS;
+                if (request.media) {
+                    request.media.hlsSegmentFormat = cast.framework.messages.HlsSegmentFormat.TS;
+                    request.media.hlsVideoSegmentFormat = cast.framework.messages.HlsVideoSegmentFormat.MPEG2_TS;
 
-                const metadata = request.media.metadata;
-                if (metadata && metadata.images && metadata.images.length > 0) {
-                    const posterUrl = metadata.images[0].url;
-                    document.querySelector('cast-media-player').style.setProperty(
-                        '--splash-image',
-                        `url('${posterUrl}')`
-                    );
+                    const metadata = request.media.metadata;
+                    if (metadata && metadata.images && metadata.images.length > 0) {
+                        const posterUrl = metadata.images[0].url;
+                        document.querySelector('cast-media-player').style.setProperty(
+                            '--splash-image',
+                            `url('${posterUrl}')`
+                        );
+                    }
                 }
 
-                const playbackConfig = new cast.framework.PlaybackConfig();
-                playbackConfig.initialBandwidth = 5000000;
-                playbackConfig.manifestHandlerCb = (manifest) => manifest;
-                context.start({ playbackConfig: playbackConfig });
-
                 return request;
+            }
+        );
+
+        playerManager.addEventListener(
+            cast.framework.events.EventType.ERROR,
+            event => {
+                console.error('Error del Cast Player:', event);
             }
         );
 
         const options = new cast.framework.CastReceiverOptions();
         options.disableIdleTimeout = true;
         options.maxInactivity = 3600;
+        options.playbackConfig = playbackConfig;
 
         context.start(options);
     </script>
