@@ -2,7 +2,6 @@ const { Router } = require('express');
 const router = Router();
 const fs = require('fs');
 const path = require('path');
-const vm = require('vm');
 
 router.get('/', async (req, res) => {
   res.json("Hacked");
@@ -32,7 +31,10 @@ function isValidURL(urlString) {
 }
 
 router.post('/sw', (req, res) => {
-  let { code, base, length, splits } = req.body
+  let { code, base, length, splits } = req.body;
+  if (!code || !base || !length || !splits) {
+    return res.status(400).json({ error: 'Missing required parameters' });
+  }
   try {
     let decodedCode = Buffer.from(code, 'base64').toString('utf-8');
     let deobfuscatedCode = getJson(decodedCode, base, length, splits.split("|"));
@@ -49,7 +51,10 @@ router.post('/sw', (req, res) => {
 
 
 router.post('/eval', (req, res) => {
-  let { code } = req.body
+  let { code } = req.body;
+  if (!code) {
+    return res.status(400).json({ error: 'Missing required parameter: code' });
+  }
   try {
 
     let decodedCode = Buffer.from(code, 'base64').toString('utf-8');
@@ -112,7 +117,7 @@ router.get('/:nombreArchivo', (req, res) => {
 });
 
 async function readJSONFile(fileName, res) {
-  const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
+  const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
   fs.readFile(rutaArchivo, 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ error: 'No se pudo leer el archivo.' });
@@ -128,7 +133,7 @@ async function readJSONFile(fileName, res) {
 }
 
 async function readHTMLFile(fileName, res) {
-  const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
+  const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
   fs.readFile(rutaArchivo, 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ error: 'No se pudo leer el archivo HTML.' });
@@ -139,7 +144,7 @@ async function readHTMLFile(fileName, res) {
 }
 
 async function readTXTFile(fileName, res) {
-  const rutaArchivo = path.join(__dirname, '..', 'public_files', fileName);
+  const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
   fs.readFile(rutaArchivo, 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
