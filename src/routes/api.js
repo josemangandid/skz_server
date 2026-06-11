@@ -9,7 +9,10 @@ router.get('/', async (req, res) => {
 
 router.get('/app', (req, res) => {
   const app = req.query.q;
-
+  const packageRegex = /^[a-zA-Z][a-zA-Z0-9_]*(\.[a-zA-Z][a-zA-Z0-9_]*)+$/;
+  if (!app || !packageRegex.test(app)) {
+    return res.status(400).json({ error: 'Invalid app ID' });
+  }
   res.redirect("market://details?id=" + app);
 });
 
@@ -118,41 +121,34 @@ router.get('/:nombreArchivo', (req, res) => {
 
 async function readJSONFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
-  fs.readFile(rutaArchivo, 'utf8', (err, data) => {
-    if (err) {
-      return res.status(500).json({ error: 'No se pudo leer el archivo.' });
-    }
-
-    try {
-      const jsonData = JSON.parse(data);
-      res.json(jsonData);
-    } catch (parseError) {
-      res.status(500).json({ error: 'No se pudo leer el archivo JSON.' });
-    }
-  });
+  try {
+    const data = await fs.promises.readFile(rutaArchivo, 'utf8');
+    const jsonData = JSON.parse(data);
+    res.json(jsonData);
+  } catch (err) {
+    res.status(500).json({ error: 'No se pudo leer o parsear el archivo JSON.' });
+  }
 }
 
 async function readHTMLFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
-  fs.readFile(rutaArchivo, 'utf8', (err, data) => {
-    if (err) {
-      return res.status(500).json({ error: 'No se pudo leer el archivo HTML.' });
-    }
-
+  try {
+    const data = await fs.promises.readFile(rutaArchivo, 'utf8');
     res.send(data);
-  });
+  } catch (err) {
+    res.status(500).json({ error: 'No se pudo leer el archivo HTML.' });
+  }
 }
 
 async function readTXTFile(fileName, res) {
   const rutaArchivo = path.join(__dirname, '..', 'public_files', path.basename(fileName));
-  fs.readFile(rutaArchivo, 'utf8', (err, data) => {
-    if (err) {
-      return res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
-    }
-
+  try {
+    const data = await fs.promises.readFile(rutaArchivo, 'utf8');
     res.setHeader('Content-Type', 'text/plain');
     res.send(data);
-  });
+  } catch (err) {
+    res.status(500).json({ error: 'No se pudo leer el archivo TXT.' });
+  }
 }
 
 

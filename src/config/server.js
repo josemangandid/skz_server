@@ -2,9 +2,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const cors = require('cors');
+const helmet = require('helmet');
+const rateLimit = require('express-rate-limit');
 
 class Server {
-    constructor(){
+    constructor() {
         this.app = express();
         this.port = process.env.PORT || '8080';
 
@@ -13,22 +16,33 @@ class Server {
         this.routes();
     }
 
-    connectToDB(){
+    connectToDB() {
         connection();
     }
 
-    settings(){
+    settings() {
         this.app.set('json spaces', 3);
     }
 
-    middlewares(){
+    middlewares() {
+        const limiter = rateLimit({
+            windowMs: 15 * 60 * 1000,
+            max: 10,
+            message: { error: 'Demasiadas peticiones desde esta IP, por favor intenta de nuevo en unos minutos.' },
+            standardHeaders: true,
+            legacyHeaders: false,
+        });
+
+        this.app.use(helmet());
+        this.app.use(cors());
+        this.app.use(limiter);
         this.app.use(morgan('dev'));
         this.app.use(express.urlencoded({ extended: true }))
         this.app.use(express.json());
         this.app.use('/', express.static(path.join(__dirname, '..', 'public_files')));
     }
 
-    routes(){
+    routes() {
         this.app.use(require('../routes/api'));
         this.app.use('*', (req, res) => {
             res.status(404).json({
@@ -42,7 +56,7 @@ class Server {
         });
     }
 
-    listen(){
+    listen() {
         this.app.listen(this.port, () => {
             console.log(`Server on port ${this.port}`);
         });
