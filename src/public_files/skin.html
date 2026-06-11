@@ -39,7 +39,7 @@
         const playerManager = context.getPlayerManager();
 
         const playbackConfig = new cast.framework.PlaybackConfig();
-        playbackConfig.initialBandwidth = 1500000;
+        playbackConfig.initialBandwidth = 5000000;
         playbackConfig.manifestHandlerCb = (manifest) => manifest;
 
         playerManager.setMessageInterceptor(
