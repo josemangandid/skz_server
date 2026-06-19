@@ -40,7 +40,24 @@
 
         const playbackConfig = new cast.framework.PlaybackConfig();
         playbackConfig.initialBandwidth = 5000000;
-        playbackConfig.manifestHandlerCb = (manifest) => manifest;
+
+        let currentHeaders = {};
+
+        playbackConfig.manifestRequestHandler = requestInfo => {
+            if (currentHeaders) {
+                for (const key in currentHeaders) {
+                    requestInfo.headers[key] = currentHeaders[key];
+                }
+            }
+        };
+
+        playbackConfig.segmentRequestHandler = requestInfo => {
+            if (currentHeaders) {
+                for (const key in currentHeaders) {
+                    requestInfo.headers[key] = currentHeaders[key];
+                }
+            }
+        };
 
         playerManager.setMessageInterceptor(
             cast.framework.messages.MessageType.LOAD,
@@ -56,6 +73,14 @@
                             '--splash-image',
                             `url('${posterUrl}')`
                         );
+                    }
+
+                    if (request.media.customData && request.media.customData.httpHeaders) {
+                        currentHeaders = request.media.customData.httpHeaders;
+                    } else if (request.media.customData && request.media.customData.headers) {
+                        currentHeaders = request.media.customData.headers;
+                    } else {
+                        currentHeaders = {};
                     }
                 }
 
