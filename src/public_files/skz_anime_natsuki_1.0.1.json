@@ -16,5 +16,30 @@
     "forceUpdate": true,
     "url": "https://natsuki.skizofrenks.xyz/",
     "version": "1.0.2"
-  }
+  },
+  "urgent_announcement": {
+    "id": "ann_001",
+    "text": "¡Bienvenido a la nueva versión de Natsuki! Disfruta de la nueva interfaz.",
+    "url": "https://natsuki.skizofrenks.xyz/",
+    "dismissible": true,
+    "show": true,
+    "background_color": "#1E1E1E",
+    "text_color": "#FFFFFF"
+  },
+  "in_app_notifications": [
+    {
+      "id": "notif_001",
+      "title": "🎉 Nuevo Sistema de Notificaciones",
+      "message": "¡Ya puedes recibir alertas directamente en la aplicación!",
+      "url": "",
+      "date": "21/06/2026"
+    },
+    {
+      "id": "notif_002",
+      "title": "📚 Se cambió el ícono a Libros",
+      "message": "Tal como pediste, la sección de favoritos ahora luce el ícono de libros.",
+      "url": "",
+      "date": "21/06/2026"
+    }
+  ]
 }
