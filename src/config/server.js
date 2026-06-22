@@ -27,7 +27,7 @@ class Server {
     middlewares() {
         const limiter = rateLimit({
             windowMs: 15 * 60 * 1000,
-            max: 10,
+            max: 15,
             message: { error: 'Demasiadas peticiones desde esta IP, por favor intenta de nuevo en unos minutos.' },
             standardHeaders: true,
             legacyHeaders: false,
