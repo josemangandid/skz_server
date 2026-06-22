@@ -4,20 +4,17 @@
   "update": false,
   "showAds": true,
   "cooldownMinutes": 5,
-  "checkUpdate": false,
-  "existInStore": false,
-  "numberScript": 3,
-  "site": "https://animeflvapp.net/",
+  "site": "https://natsuki.skizofrenks.xyz/",
   "headers": {
     "User-Agent": "PostmanRuntime/7.41.2"
   },
   "image": "",
   "message": "Hemos cocinado algunas mejoras en AnimeFLV...",
   "app": {
-    "urlimage": "https://storage.googleapis.com/crazy_rebelion/anime_flv/anime_flv.png",
-    "nameapp": "animeFLV",
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
+    "nameapp": "Anime Natsuki",
     "forceUpdate": true,
-    "url": "https://animeflvapp.net/",
-    "version": "1.0.0"
+    "url": "https://natsuki.skizofrenks.xyz/",
+    "version": "1.0.2"
   }
 }
