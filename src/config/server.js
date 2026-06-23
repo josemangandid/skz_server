@@ -1,4 +1,3 @@
-
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -22,12 +21,13 @@ class Server {
 
     settings() {
         this.app.set('json spaces', 3);
+        this.app.set('trust proxy', 1);
     }
 
     middlewares() {
         const limiter = rateLimit({
             windowMs: 15 * 60 * 1000,
-            max: 15,
+            max: 100,
             message: { error: 'Demasiadas peticiones desde esta IP, por favor intenta de nuevo en unos minutos.' },
             standardHeaders: true,
             legacyHeaders: false,
