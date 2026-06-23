@@ -3,6 +3,7 @@
   "manto": false,
   "update": false,
   "showAds": true,
+  "showAdultGate": true,
   "cooldownMinutes": 5,
   "site": "https://natsuki.skizofrenks.xyz/",
   "headers": {
