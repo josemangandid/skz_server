@@ -19,10 +19,10 @@
     "version": "1.0.2"
   },
   "urgent_announcement": {
-    "id": "ann_001",
-    "text": "¡Bienvenido a la nueva versión de Natsuki! Disfruta de la nueva interfaz.",
-    "url": "https://natsuki.skizofrenks.xyz/",
-    "dismissible": true,
+    "id": "ann_002",
+    "text": "¡Síguenos en Facebook! Haz click AQUÍ",
+    "url": "https://www.facebook.com/natsuki.anime/",
+    "dismissible": false,
     "show": true,
     "background_color": "#1E1E1E",
     "text_color": "#FFFFFF"
