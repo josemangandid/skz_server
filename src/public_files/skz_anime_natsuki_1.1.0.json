@@ -1,7 +1,7 @@
 {
   "fake": false,
   "manto": false,
-  "update": false,
+  "update": true,
   "showAds": true,
   "showAdultGate": true,
   "cooldownMinutes": 5,
@@ -10,13 +10,13 @@
     "User-Agent": "PostmanRuntime/7.41.2"
   },
   "image": "",
-  "message": "Hemos cocinado algunas mejoras en AnimeFLV...",
+  "message": "Hemos hecho algunos cambios y mejoras en la aplicación, pruébala...",
   "app": {
     "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
     "nameapp": "Anime Natsuki",
     "forceUpdate": true,
     "url": "https://natsuki.skizofrenks.xyz/",
-    "version": "1.0.2"
+    "version": "1.1.1"
   },
   "urgent_announcement": {
     "id": "ann_001",
