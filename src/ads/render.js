@@ -89,6 +89,17 @@ function renderInterstitial(ad, clickUrl, id) {
   const accentTint = rgba(accent, 0.32, '#fe2c55');
   const accentShadow = rgba(accent, 0.45, '#fe2c55');
 
+  // CTA + hint markup, reused in two spots: pinned at the bottom in portrait,
+  // and beside the copy (right column) in landscape. Only one is visible at a
+  // time (toggled by the orientation media query).
+  const ctaBlock = `<button class="cta" onclick="onCta()">
+        <span>${ctaText}</span>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="hint">Cierra el anuncio para volver al contenido</p>`;
+
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -172,9 +183,11 @@ function renderInterstitial(ad, clickUrl, id) {
     .cta:active { transform: translateY(1px) scale(.985); box-shadow: 0 8px 18px -10px ${accentShadow}; }
     .cta svg { width: 18px; height: 18px; }
     .hint { margin: 14px 0 0; text-align: center; font-size: 12px; color: ${faint}; opacity: .8; }
+    /* Portrait shows the bottom CTA; the inline (beside-copy) one is hidden. */
+    .actions-inline { display: none; }
 
     /* Landscape: switch the creative to two columns (media | copy) so it fits
-       the short viewport height, keeping the CTA pinned at the bottom. */
+       the short viewport height, and move the CTA beside the copy. */
     @media (orientation: landscape) {
       .stage {
         padding: calc(env(safe-area-inset-top, 0px) + 10px) 40px
@@ -190,14 +203,17 @@ function renderInterstitial(ad, clickUrl, id) {
       .media {
         width: 44%;
         max-width: 320px;
-        max-height: 52vh;
+        max-height: 60vh;
         margin-bottom: 0;
         flex: 0 0 auto;
       }
       .copy { flex: 1 1 auto; min-width: 0; }
       h1 { font-size: 22px; margin-bottom: 8px; }
       p { max-width: none; }
-      .actions { margin-top: 10px; }
+      /* Swap which CTA is visible. */
+      .actions-bottom { display: none; }
+      .actions-inline { display: block; width: 100%; max-width: 320px; margin: 16px 0 0; }
+      .actions-inline .hint { text-align: left; }
     }
     /* Very short landscape (small phones): tighten spacing further. */
     @media (orientation: landscape) and (max-height: 380px) {
@@ -221,19 +237,12 @@ function renderInterstitial(ad, clickUrl, id) {
         <div class="copy">
           <h1>${title}</h1>
           <p>${body}</p>
+          <div class="actions actions-inline">${ctaBlock}</div>
         </div>
       </div>
     </div>
 
-    <div class="actions">
-      <button class="cta" id="cta" onclick="onCta()">
-        <span>${ctaText}</span>
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <p class="hint">Cierra el anuncio para volver al contenido</p>
-    </div>
+    <div class="actions actions-bottom">${ctaBlock}</div>
   </div>
 
   <script>
