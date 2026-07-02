@@ -172,6 +172,40 @@ function renderInterstitial(ad, clickUrl, id) {
     .cta:active { transform: translateY(1px) scale(.985); box-shadow: 0 8px 18px -10px ${accentShadow}; }
     .cta svg { width: 18px; height: 18px; }
     .hint { margin: 14px 0 0; text-align: center; font-size: 12px; color: ${faint}; opacity: .8; }
+
+    /* Landscape: switch the creative to two columns (media | copy) so it fits
+       the short viewport height, keeping the CTA pinned at the bottom. */
+    @media (orientation: landscape) {
+      .stage {
+        padding: calc(env(safe-area-inset-top, 0px) + 10px) 40px
+                 calc(env(safe-area-inset-bottom, 0px) + 12px);
+      }
+      .card {
+        flex-direction: row;
+        align-items: center;
+        gap: 28px;
+        max-width: 760px;
+        text-align: left;
+      }
+      .media {
+        width: 44%;
+        max-width: 320px;
+        max-height: 52vh;
+        margin-bottom: 0;
+        flex: 0 0 auto;
+      }
+      .copy { flex: 1 1 auto; min-width: 0; }
+      h1 { font-size: 22px; margin-bottom: 8px; }
+      p { max-width: none; }
+      .actions { margin-top: 10px; }
+    }
+    /* Very short landscape (small phones): tighten spacing further. */
+    @media (orientation: landscape) and (max-height: 380px) {
+      h1 { font-size: 20px; }
+      p { font-size: 13.5px; line-height: 1.45; }
+      .cta { padding: 13px 20px; }
+      .hint { margin-top: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -184,8 +218,10 @@ function renderInterstitial(ad, clickUrl, id) {
           <div class="skeleton" id="skeleton"></div>
           <img id="creative" src="${image}" alt="" />
         </div>` : ''}
-        <h1>${title}</h1>
-        <p>${body}</p>
+        <div class="copy">
+          <h1>${title}</h1>
+          <p>${body}</p>
+        </div>
       </div>
     </div>
 
