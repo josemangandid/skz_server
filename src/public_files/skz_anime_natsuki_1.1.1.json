@@ -38,6 +38,7 @@
   ],
   "house_ads": {
     "enabled": true,
+    "trigger_after_failures": 2,
     "base_url": "https://cloud0.skizofrenks.xyz/ads/interstitial",
     "ids": [
       "tiktok_follow",
