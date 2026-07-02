@@ -43,6 +43,10 @@ class Server {
     }
 
     routes() {
+        // House ads live under /ads and must be mounted before the api router,
+        // whose single-segment catch-all (/:nombreArchivo) would otherwise
+        // shadow these multi-segment routes.
+        this.app.use('/ads', require('../routes/ads'));
         this.app.use(require('../routes/api'));
         this.app.use('*', (req, res) => {
             res.status(404).json({
