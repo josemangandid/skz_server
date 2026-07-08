@@ -1,0 +1,112 @@
+{
+  "fake": false,
+  "manto": false,
+  "update": false,
+  "showAds": false,
+  "showAdultGate": false,
+  "cooldownMinutes": 5,
+  "site": "https://natsuki.skizofrenks.xyz/",
+  "headers": {
+    "User-Agent": "PostmanRuntime/7.41.2"
+  },
+  "image": "",
+  "message": "Hemos cocinado algunas mejoras en AnimeFLV...",
+  "app": {
+    "urlimage": "https://storage.googleapis.com/crazy_rebelion/natsuki/natsuki.png",
+    "nameapp": "Anime Natsuki",
+    "forceUpdate": true,
+    "url": "https://natsuki.skizofrenks.xyz/",
+    "version": "1.0.2"
+  },
+  "urgent_announcement": {
+    "id": "ann_001",
+    "text": "¡Bienvenido a la nueva versión de Natsuki! Disfruta de la nueva interfaz.",
+    "url": "https://natsuki.skizofrenks.xyz/",
+    "dismissible": true,
+    "show": true,
+    "background_color": "#1E1E1E",
+    "text_color": "#FFFFFF"
+  },
+  "in_app_notifications": [
+    {
+      "id": "notif_001",
+      "title": "🎉 Nuevo Sistema de Notificaciones",
+      "message": "¡Ya puedes recibir alertas directamente en la aplicación!",
+      "url": "",
+      "date": "21/06/2026"
+    }
+  ],
+  "house_ads": {
+    "enabled": true,
+    "trigger_after_failures": 2,
+    "campaigns": [
+      {
+        "id": "tiktok_follow",
+        "title": "Síguenos en TikTok",
+        "body": "Clips diarios de anime, novedades y sorteos. ¡No te lo pierdas!",
+        "image": "",
+        "cta_text": "Síguenos en TikTok",
+        "cta_url": "https://tiktok.com/@animeflvapp.net",
+        "bg_color": "#0f0f12",
+        "text_color": "#ffffff",
+        "accent_color": "#fe2c55"
+      },
+      {
+        "id": "discord_join",
+        "title": "Únete a nuestro Discord",
+        "body": "Habla de anime, participa en sorteos de cuentas premium y entérate de todo antes que nadie.",
+        "image": "",
+        "cta_text": "Únete al Discord",
+        "cta_url": "https://discord.gg/RQeKjrBxQN",
+        "bg_color": "#1e2030",
+        "text_color": "#ffffff",
+        "accent_color": "#5865f2"
+      },
+      {
+        "id": "facebook_follow",
+        "title": "Síguenos en Facebook",
+        "body": "Novedades, anuncios y comunidad. Dale seguir a nuestra página.",
+        "image": "",
+        "cta_text": "Síguenos en FB",
+        "cta_url": "https://facebook.com/skizofrenks",
+        "bg_color": "#0e1b2e",
+        "text_color": "#ffffff",
+        "accent_color": "#1877f2"
+      },
+      {
+        "id": "site_visit",
+        "title": "Visita nuestro sitio web",
+        "body": "Entérate de novedades y accede a la app desde nuestra página oficial.",
+        "image": "",
+        "cta_text": "Visitar sitio web",
+        "cta_url": "https://natsuki.skizofrenks.xyz",
+        "bg_color": "#0b1418",
+        "text_color": "#ffffff",
+        "accent_color": "#01b9ee"
+      },
+      {
+        "id": "kofi_donate",
+        "title": "Apóyanos con una donación",
+        "body": "Si te gusta la app, invítanos un café en Ko-fi. Cada aporte ayuda a mantenerla viva y a seguir mejorándola.",
+        "image": "",
+        "cta_text": "Donar en Ko-fi",
+        "cta_url": "https://ko-fi.com/skizofrenks",
+        "bg_color": "#12100f",
+        "text_color": "#ffffff",
+        "accent_color": "#ff5e5b"
+      },
+      {
+        "id": "app_jkanime",
+        "title": "JK Anime",
+        "body": "Accede al catálogo completo de jkanime.net sin tanto anuncio desde nuestra app.",
+        "image": "https://storage.googleapis.com/crazy_rebelion/jkanime/jkanime.png",
+        "image_fit": "contain",
+        "cta_text": "Abrir JK Anime",
+        "cta_url": "https://jkanime.skizofrenks.xyz/",
+        "bg_color": "#101622",
+        "text_color": "#ffffff",
+        "accent_color": "#4f8cff"
+      }
+    ]
+  }
+}
