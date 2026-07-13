@@ -31,6 +31,9 @@ class Server {
             message: { error: 'Demasiadas peticiones desde esta IP, por favor intenta de nuevo en unos minutos.' },
             standardHeaders: true,
             legacyHeaders: false,
+            // El device-link de TV hace polling y superaria este limite; tiene
+            // su propio limitador dedicado en su router.
+            skip: (req) => req.path.startsWith('/tv-link'),
         });
 
         this.app.use(helmet());
@@ -43,6 +46,7 @@ class Server {
     }
 
     routes() {
+        this.app.use('/tv-link', require('../routes/tv_link'));
         this.app.use(require('../routes/api'));
         this.app.use('*', (req, res) => {
             res.status(404).json({
