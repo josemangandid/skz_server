@@ -146,4 +146,64 @@ router.get('/status', (req, res) => {
     return res.json({ status: 'pending' });
 });
 
+// 4) Pagina de aterrizaje del QR. El movil escanea el QR de la TV (una URL
+// https, que las camaras abren de forma fiable), cae aqui con el code y desde
+// esta pagina abre la app por deep link con el code prellenado. Si la app no
+// esta instalada o el deep link falla, la pagina muestra el code e
+// instrucciones para vincular a mano. El code se valida antes de reflejarlo
+// en el HTML (evita inyeccion).
+router.get('/open', (req, res) => {
+    const { code } = req.query;
+    const valid = typeof code === 'string' && CODE_RE.test(code);
+    const safeCode = valid ? code : '';
+    const deepLink = valid ? `animeflvtv://link?code=${safeCode}` : '';
+
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    return res.send(`<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Vincular TV · AnimeFLV</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+         background:#0e0e10; color:#fff; display:flex; min-height:100vh;
+         align-items:center; justify-content:center; padding:24px; }
+  .card { width:100%; max-width:420px; text-align:center; }
+  h1 { font-size:22px; margin:0 0 8px; }
+  p { color:#b7b7bd; font-size:15px; line-height:1.5; margin:0 0 20px; }
+  .code { display:inline-block; font-size:34px; font-weight:800; letter-spacing:10px;
+          background:#1a1a1d; border:1px solid #2a2a2e; border-radius:14px;
+          padding:14px 20px; margin:8px 0 24px; }
+  .btn { display:block; width:100%; background:#01b9ee; color:#fff; text-decoration:none;
+         font-weight:700; font-size:17px; padding:16px; border-radius:14px; margin-bottom:16px; }
+  .steps { text-align:left; color:#b7b7bd; font-size:14px; line-height:1.6; }
+  .brand { color:#01b9ee; font-style:italic; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Vincular esta <span class="brand">TV</span></h1>
+    ${valid ? `
+    <p>Toca el botón para abrir AnimeFLV en este teléfono y vincular la TV. El código ya va incluido.</p>
+    <div class="code">${safeCode}</div>
+    <a class="btn" href="${deepLink}">Abrir en AnimeFLV</a>
+    <div class="steps">
+      ¿No se abrió? Abre <b>AnimeFLV</b> a mano →<br>
+      <b>Perfil → Vincular TV</b> e ingresa el código <b>${safeCode}</b>.
+    </div>` : `
+    <p>El enlace no es válido o el código expiró. Genera un código nuevo en tu televisor e inténtalo otra vez.</p>`}
+  </div>
+  ${valid ? `<script>
+    // Intento de apertura automatica; si la app no esta, no pasa nada y queda
+    // el boton + instrucciones.
+    setTimeout(function(){ window.location.href = ${JSON.stringify(deepLink)}; }, 400);
+  </script>` : ''}
+</body>
+</html>`);
+});
+
 module.exports = router;
