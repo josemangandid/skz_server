@@ -14,9 +14,18 @@ const router = Router();
 //
 // Estado efimero en memoria: si el proceso reinicia, los codigos pendientes
 // se pierden y el usuario simplemente reintenta. No hay datos que persistir.
+//
+// Autenticacion del polling por FIRMA (Ed25519), no por secreto compartido
+// (Plan B): la TV genera un par de llaves; en /new envia solo la PUBLICA y el
+// servidor le devuelve un `challenge` aleatorio. Para consultar /status la TV
+// firma `code.challenge` con su llave PRIVADA (que nunca sale del dispositivo)
+// y el servidor verifica la firma con la publica guardada. Consecuencia: el
+// servidor jamas almacena un credencial reutilizable; aunque se filtrara su
+// memoria o sus logs, sin la llave privada nadie puede forjar una firma valida
+// ni recuperar el authCode.
 // ---------------------------------------------------------------------------
 
-/** code -> { deviceId, status, authCode, expiresAt } */
+/** code -> { publicKey: KeyObject, challenge, status, authCode, expiresAt } */
 const links = new Map();
 
 const CODE_TTL_MS = 10 * 60 * 1000; // 10 min
@@ -24,15 +33,61 @@ const CODE_TTL_MS = 10 * 60 * 1000; // 10 min
 const CODE_ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const CODE_LENGTH = 6;
 
-const DEVICE_ID_RE = /^[A-Za-z0-9._-]{8,128}$/;
 const CODE_RE = new RegExp(`^[${CODE_ALPHABET}]{${CODE_LENGTH}}$`);
 // Los authorization codes de Discord son alfanumericos cortos; acotamos por
 // seguridad sin ser tan estrictos como para rechazar formatos validos.
 const AUTH_CODE_RE = /^[A-Za-z0-9._-]{10,512}$/;
+// Base64 estandar (con posible padding). El largo exacto se valida al decodificar.
+const BASE64_RE = /^[A-Za-z0-9+/]+={0,2}$/;
+
+// Ed25519: llave publica cruda = 32 bytes, firma = 64 bytes. Node no acepta una
+// llave publica Ed25519 "cruda" directamente, asi que la envolvemos en el
+// prefijo DER SPKI fijo del algoritmo (12 bytes) + los 32 bytes de la llave.
+const ED25519_SPKI_PREFIX = Buffer.from('302a300506032b6570032100', 'hex');
+
+// Construye un KeyObject a partir de la llave publica cruda en base64. Devuelve
+// null si el formato o el largo no son validos (nunca lanza).
+function publicKeyFromRawB64(b64) {
+    if (typeof b64 !== 'string' || !BASE64_RE.test(b64)) return null;
+    let raw;
+    try {
+        raw = Buffer.from(b64, 'base64');
+    } catch (_) {
+        return null;
+    }
+    if (raw.length !== 32) return null;
+    try {
+        return crypto.createPublicKey({
+            key: Buffer.concat([ED25519_SPKI_PREFIX, raw]),
+            format: 'der',
+            type: 'spki',
+        });
+    } catch (_) {
+        return null;
+    }
+}
+
+// Verifica la firma Ed25519 de `message` contra la llave publica guardada.
+// Robusto ante entradas malformadas: cualquier error devuelve false.
+function verifySignature(publicKey, message, sigB64) {
+    if (typeof sigB64 !== 'string' || !BASE64_RE.test(sigB64)) return false;
+    let sig;
+    try {
+        sig = Buffer.from(sigB64, 'base64');
+    } catch (_) {
+        return false;
+    }
+    if (sig.length !== 64) return false;
+    try {
+        return crypto.verify(null, Buffer.from(message, 'utf8'), publicKey, sig);
+    } catch (_) {
+        return false;
+    }
+}
 
 // Limitador dedicado y generoso: el polling de la TV (~cada 5s durante hasta
 // 10 min) superaria el limitador global de la app. server.js exime /tv-link
-// del global y aplica este.
+// del global y aplica este a todo el router.
 const tvLinkLimiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 400,
@@ -41,6 +96,28 @@ const tvLinkLimiter = rateLimit({
     message: { error: 'rate_limited' },
 });
 router.use(tvLinkLimiter);
+
+// Limitador estricto POR IP para la creacion de codigos: evita que un solo
+// actor agote memoria spammeando /new. Una TV legitima solo regenera al expirar
+// (cada ~10 min), asi que 8/10min le sobra.
+const newLimiter = rateLimit({
+    windowMs: 10 * 60 * 1000,
+    max: 8,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { error: 'rate_limited' },
+});
+
+// Limitador estricto POR IP para el reclamo: el code es secreto (6 chars random
+// sobre 30 simbolos = ~729M), y este limite vuelve inviable adivinarlo por
+// fuerza bruta. Un flujo legitimo hace 1 claim; damos margen para reintentos.
+const claimLimiter = rateLimit({
+    windowMs: 10 * 60 * 1000,
+    max: 20,
+    standardHeaders: true,
+    legacyHeaders: false,
+    message: { error: 'rate_limited' },
+});
 
 function generateCode() {
     let code = '';
@@ -67,26 +144,30 @@ const sweep = setInterval(() => {
 }, 60 * 1000);
 if (sweep.unref) sweep.unref();
 
-// 1) La TV pide un codigo nuevo.
-router.post('/new', (req, res) => {
-    const { deviceId } = req.body || {};
-    if (typeof deviceId !== 'string' || !DEVICE_ID_RE.test(deviceId)) {
-        return res.status(400).json({ error: 'invalid_device_id' });
+// 1) La TV pide un codigo nuevo, entregando su llave PUBLICA. El servidor
+// responde con el code y un challenge aleatorio que la TV debera firmar.
+router.post('/new', newLimiter, (req, res) => {
+    const { publicKey } = req.body || {};
+    const keyObject = publicKeyFromRawB64(publicKey);
+    if (!keyObject) {
+        return res.status(400).json({ error: 'invalid_public_key' });
     }
 
     const code = generateCode();
+    const challenge = crypto.randomBytes(16).toString('hex');
     links.set(code, {
-        deviceId,
+        publicKey: keyObject,
+        challenge,
         status: 'pending',
         authCode: null,
         expiresAt: Date.now() + CODE_TTL_MS,
     });
 
-    return res.json({ code, expiresInSeconds: CODE_TTL_MS / 1000 });
+    return res.json({ code, challenge, expiresInSeconds: CODE_TTL_MS / 1000 });
 });
 
 // 2) El movil reclama el codigo entregando el authorization code de Discord.
-router.post('/claim', (req, res) => {
+router.post('/claim', claimLimiter, (req, res) => {
     const { code, authCode } = req.body || {};
     if (typeof code !== 'string' || !CODE_RE.test(code)) {
         return res.status(400).json({ error: 'invalid_code' });
@@ -112,16 +193,14 @@ router.post('/claim', (req, res) => {
     return res.json({ success: true });
 });
 
-// 3) La TV consulta el estado (polling). deviceId actua como segundo secreto:
-// aunque alguien vea el code (QR), sin el deviceId no puede recuperar el
-// authCode.
+// 3) La TV consulta el estado (polling) firmando `code.challenge`. La firma
+// prueba la posesion de la llave privada sin transmitir ningun secreto
+// reutilizable: quien solo vea el code (p.ej. por el QR) no puede recuperar el
+// authCode porque no puede producir una firma valida.
 router.get('/status', (req, res) => {
-    const { code, deviceId } = req.query;
+    const { code, signature } = req.query;
     if (typeof code !== 'string' || !CODE_RE.test(code)) {
         return res.status(400).json({ error: 'invalid_code' });
-    }
-    if (typeof deviceId !== 'string' || !DEVICE_ID_RE.test(deviceId)) {
-        return res.status(400).json({ error: 'invalid_device_id' });
     }
 
     const entry = links.get(code);
@@ -130,8 +209,10 @@ router.get('/status', (req, res) => {
         // La TV regenera un codigo nuevo al ver esto.
         return res.json({ status: 'expired' });
     }
-    if (entry.deviceId !== deviceId) {
-        return res.status(403).json({ error: 'device_mismatch' });
+
+    const message = `${code}.${entry.challenge}`;
+    if (!verifySignature(entry.publicKey, message, signature)) {
+        return res.status(403).json({ error: 'bad_signature' });
     }
 
     if (entry.status === 'claimed') {

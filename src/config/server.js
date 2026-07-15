@@ -36,8 +36,23 @@ class Server {
             skip: (req) => req.path.startsWith('/tv-link'),
         });
 
-        this.app.use(helmet());
-        this.app.use(cors());
+        this.app.use(helmet({
+            // HSTS explicito: fuerza a los navegadores a usar siempre HTTPS en
+            // este host y subdominios durante 1 año. (La app movil no depende de
+            // esto: usa una URL base https:// fija.)
+            hsts: { maxAge: 31536000, includeSubDomains: true },
+        }));
+        // CORS permisivo global, EXCEPTO /tv-link: esos endpoints de vinculacion
+        // no deben ser invocables por JS desde otros origenes en un navegador.
+        // Al no emitir cabecera Access-Control-Allow-Origin para /tv-link, el
+        // navegador bloquea las peticiones cross-origin. La app movil (cliente
+        // http nativo) y la pagina /tv-link/open (navegacion top-level) no se
+        // ven afectadas: CORS solo aplica a XHR/fetch cross-origin de navegador.
+        const corsMiddleware = cors();
+        this.app.use((req, res, next) => {
+            if (req.path.startsWith('/tv-link')) return next();
+            return corsMiddleware(req, res, next);
+        });
         this.app.use(limiter);
         this.app.use(morgan('dev'));
         this.app.use(express.urlencoded({ extended: true }))
