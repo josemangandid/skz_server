@@ -8,10 +8,10 @@
     "icon_url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png"
   },
   "update_config": {
-    "is_update_available": false,
+    "is_update_available": true,
     "force_update": true,
-    "latest_version": "1.0.1",
-    "update_message": "Estamos teniendo inconvenientes para poder proveerle el servicio. Favor de estar a la espera de actualizaciones respecto de este mantenimiento.",
+    "latest_version": "1.2.0",
+    "update_message": "En vista de que es muy obvio el icono de nuestra app y hay varios factores que mejorar, migramos a esta nueva app que maneja tanto anime como el hentai. Para ingresar a la seccion de hentai clickeas en el boton de doble flecha y te pide autenticar con huella/pin/patron (el que tengas) para ingresar. Actualiza desde el sitio web.",
     "download_url": "https://hentaijk.app/"
   },
   "ads_config": {
