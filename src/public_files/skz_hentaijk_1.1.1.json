@@ -1,0 +1,44 @@
+{
+  "app_status": { "is_maintenance": false },
+  "app_details": {
+    "name": "HentaiJK",
+    "website_url": "https://hentaijk.app/",
+    "icon_url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png"
+  },
+  "update_config": {
+    "is_update_available": false,
+    "force_update": false,
+    "latest_version": "1.3.0",
+    "update_message": "En vista de que es muy obvio el icono de nuestra app y hay varios factores que mejorar, migramos a esta nueva app que maneja tanto anime como el hentai. Para ingresar a la seccion de hentai clickeas en el boton de doble flecha y te pide autenticar con huella/pin/patron (el que tengas) para ingresar. Actualiza desde el sitio web.",
+    "download_url": "https://hentaijk.app/",
+    "download_urls": {
+      "arm64-v8a": "https://github.com/skizofrenksdev/hentaijk_app/releases/download/v.1.1.0-5/hentai-1.1.0-5-arm64-v8a.apk",
+      "armeabi-v7a": "https://github.com/skizofrenksdev/hentaijk_app/releases/download/v.1.1.0-5/hentai-1.1.0-5-armeabi-v7a.apk",
+      "x86_64": "https://github.com/skizofrenksdev/hentaijk_app/releases/download/v.1.1.0-5/hentai-1.1.0-5-x86_64.apk"
+    },
+    "sha256": {
+      "arm64-v8a": "531D066812B013E1494E77ABF4900107773DFD45DA0775C695FB7FD3EDEA1E67",
+      "armeabi-v7a": "E128DB6835F193ACC33FF17277D42321C55A7E8FE9A82F1C0D535609822A628B",
+      "x86_64": "C3F3A61A51B74F6906EB0B6255FB43518D86E6689832210491BF398502B14904"
+    }
+  },
+  "ads_config": {
+    "global_ads_enabled": true,
+    "show_interstitial": true,
+    "show_rewarded": true,
+    "show_banners": true,
+    "cooldown_minutes": 5
+  },
+  "network_config": {
+    "headers": { "User-Agent": "PostmanRuntime/7.41.2" }
+  },
+  "in_app_notifications": [
+    {
+      "id": "welcome-1",
+      "title": "Nueva app disponible",
+      "message": "Migramos a una app que incluye anime y hentai. Descárgala desde el sitio web.",
+      "url": "https://natsuki.skizofrenks.xyz/",
+      "date": "2026-10-05T12:00:00Z"
+    }
+  ]
+}
