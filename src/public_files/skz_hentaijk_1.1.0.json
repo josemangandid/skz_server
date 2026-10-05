@@ -1,19 +1,26 @@
-
 {
-  "app_status": {
-    "is_maintenance": false
-  },
+  "app_status": { "is_maintenance": false },
   "app_details": {
     "name": "HentaiJK",
     "website_url": "https://hentaijk.app/",
     "icon_url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png"
   },
   "update_config": {
-    "is_update_available": false,
+    "is_update_available": true,
     "force_update": false,
     "latest_version": "1.2.0",
     "update_message": "En vista de que es muy obvio el icono de nuestra app y hay varios factores que mejorar, migramos a esta nueva app que maneja tanto anime como el hentai. Para ingresar a la seccion de hentai clickeas en el boton de doble flecha y te pide autenticar con huella/pin/patron (el que tengas) para ingresar. Actualiza desde el sitio web.",
-    "download_url": "https://hentaijk.app/"
+    "download_url": "https://hentaijk.app/",
+    "download_urls": {
+      "arm64-v8a": "https://github.com/josemangandid/jkanime_app/releases/download/v1.1.0-5/hentai-1.1.0-5-arm64-v8a.apk",
+      "armeabi-v7a": "https://github.com/josemangandid/jkanime_app/releases/download/v1.1.0-5/hentai-1.1.0-5-armeabi-v7a.apk",
+      "x86_64": "https://github.com/josemangandid/jkanime_app/releases/download/v1.1.0-5/hentai-1.1.0-5-x86_64.apk"
+    },
+    "sha256": {
+      "arm64-v8a": "531d066812b013e1494e77abf4900107773dfd45da0775c695fb7fd3edea1e67",
+      "armeabi-v7a": "e128db6835f193acc33ff17277d42321c55a7e8fe9a82f1c0d535609822a628b",
+      "x86_64": "c3f3a61a51b74f6906eb0b6255fb43518d86e6689832210491bf398502b14904"
+    }
   },
   "ads_config": {
     "global_ads_enabled": true,
@@ -23,8 +30,6 @@
     "cooldown_minutes": 5
   },
   "network_config": {
-    "headers": {
-      "User-Agent": "PostmanRuntime/7.41.2"
-    }
+    "headers": { "User-Agent": "PostmanRuntime/7.41.2" }
   }
 }
