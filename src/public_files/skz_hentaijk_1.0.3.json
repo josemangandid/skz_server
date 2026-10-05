@@ -8,17 +8,17 @@
     "icon_url": "https://storage.googleapis.com/crazy_rebelion/hentaijk/hentaijk.png"
   },
   "update_config": {
-    "is_update_available": false,
-    "force_update": false,
-    "latest_version": "1.2.0",
-    "update_message": "En vista de que es muy obvio el icono de nuestra app y hay varios factores que mejorar, migramos a esta nueva app que maneja tanto anime como el hentai. Para ingresar a la seccion de hentai clickeas en el boton de doble flecha y te pide autenticar con huella/pin/patron (el que tengas) para ingresar. Actualiza desde el sitio web.",
+    "is_update_available": true,
+    "force_update": true,
+    "latest_version": "1.1.0",
+    "update_message": "Hemos actualizado y mejorado la app, tanto en su interfaz de usuario como en la optimización de su funcionamiento.\n\nNovedades de la 1.1.0:\n\n• Guarda tus animes por estado: Mirando, Visto, Por ver, Favorito y Dropped, y fíltralos en tus guardados.\n• Toca un género dentro de un anime y te llevamos al directorio ya filtrado.\n• Las próximas actualizaciones se descargan dentro de la app, con un archivo más ligero según tu dispositivo.\n\nActualiza ahora para disfrutar de todas las mejoras.",
     "download_url": "https://hentaijk.app/"
   },
   "ads_config": {
-    "global_ads_enabled": true,
+    "global_ads_enabled": false,
     "show_interstitial": false,
     "show_rewarded": false,
-    "show_banners": true,
+    "show_banners": false,
     "taps_to_show_ad": 2,
     "taps_per_chapter_to_show_ad": 1
   },
